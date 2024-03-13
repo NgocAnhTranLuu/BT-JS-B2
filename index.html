@@ -15,11 +15,128 @@
 
 <body>
 
+    <!-- B1: QUẢN LÝ TUYỂN SINH -->
+    <div class="container w-50">
+        <form>
+            <div>
+                <h2>B1: QUẢN LÝ TUYỂN SINH</h2>
+            </div>
+
+            <div class="row">
+                <div class="col-4 form-group">
+                    <label for="mon1">Điểm Môn 1</label>
+                    <input type="number" class="form-control" id="mon1" placeholder="10">
+                </div>
+                <div class="col-4 form-group">
+                    <label for="mon2">Điểm Môn 2</label>
+                    <input type="number" class="form-control" id="mon2" placeholder="10">
+                </div>
+                <div class="col-4 form-group">
+                    <label for="mon3">Điểm Môn 3</label>
+                    <input type="number" class="form-control" id="mon3" placeholder="10">
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label for="khuVuc">Khu vực ưu tiên</label>
+                <select name="Khu vực ưu tiên" id="khuVuc">
+                    <option>Chọn khu vực ưu tiên</option>
+                    <option value="2">Khu vực A</option>
+                    <option value="1">Khu vực B</option>
+                    <option value="0.5">Khu vực C</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="doiTuong">Đối tượng ưu tiên</label>
+                <select name="Đối tượng ưu tiên" id="doiTuong">
+                    <option>Chọn Đối tượng ưu tiên</option>
+                    <option value="2.5">Đối tượng 1</option>
+                    <option value="1.5">Đối tượng 2</option>
+                    <option value="1">Đối tượng 3</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="diemChuan">Điểm chuẩn của trường</label>
+                <input type="number" class="form-control" id="diemChuan" placeholder="10">
+            </div>
+
+            <button id="btnB1" type="button" class="btn btn-primary">Tổng điểm đạt được</button>
+
+            <p class="alert alert-danger" id="txtB1"></p>
+        </form>
+    </div>
+
+
+
+
+    <!-- B2: TÍNH TIỀN ĐIỆN -->
+
+    <div class="container w-50">
+        <form>
+            <div>
+                <h2>B2: TÍNH TIỀN ĐIỆN</h2>
+            </div>
+
+            <div class="form-group">
+                <label for="hoTen2">Họ và tên</label>
+                <input type="text" class="form-control" id="hoTen2" placeholder="Họ và tên">
+            </div>
+
+            <div class="form-group">
+                <label for="dienTieuThu">Lượng điện tiêu thụ (kw)</label>
+                <input type="number" class="form-control" id="dienTieuThu" placeholder="100">
+            </div>
+
+            <button id="btnB2" type="button" class="btn btn-primary">Tính tiền điện</button>
+
+            <p class="alert alert-danger" id="txtB2"></p>
+        </form>
+    </div>
+
+
+
+
+    <!-- B3: THUẾ THU NHẬP CÁ NHÂN -->
+
+    <div class="container w-50">
+        <form>
+            <div>
+                <h2>B3: THUẾ THU NHẬP CÁ NHÂN</h2>
+            </div>
+
+            <div class="form-group">
+                <label for="hoTen3">Họ và tên</label>
+                <input type="text" class="form-control" id="hoTen3" placeholder="Họ và tên">
+            </div>
+
+            <div class="form-group">
+                <label for="thuNhapCN">Tổng thu nhập cá nhân</label>
+                <input type="number" class="form-control" id="thuNhapCN" placeholder="100">
+            </div>
+
+            <div class="form-group">
+                <label for="ngPhuThuoc">Số người phụ thuộc</label>
+                <input type="number" class="form-control" id="ngPhuThuoc" placeholder="1">
+            </div>
+
+            <button id="btnB3" type="button" class="btn btn-primary">Thuế thu nhập</button>
+
+            <p class="alert alert-danger" id="txtB3"></p>
+        </form>
+    </div>
+
+
 
 
 
     <!-- JS -->
-    <script src="./JS/index.js"></script>
+    <script src="./JS/B1.js"></script>
+    <script src="./JS/B2.js"></script>
+    <script src="./JS/B3.js"></script>
+    <script src="./JS/B4.js"></script>
 
 
 
