@@ -12,7 +12,7 @@ h2{
     color: rgb(0, 56, 176);
     border: solid 2px rgb(0, 56, 176);
     font-weight: 700;
-    margin-top: 70px;
+    margin-top: 50px;
 }
 
 .alert-danger{
@@ -33,9 +33,13 @@ span{
 }
 
 
-#khuVuc, #doiTuong{
+#khuVuc, #doiTuong, #KTloaiKH{
     padding: 10px;
     border-radius: 5px;
     border: solid 1px rgb(0, 56, 176);
     background-color: rgb(239, 251, 255);
+}
+
+hr{
+    margin-top: 50px;
 }

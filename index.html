@@ -70,7 +70,7 @@
     </div>
 
 
-
+    <hr>
 
     <!-- B2: TÍNH TIỀN ĐIỆN -->
 
@@ -97,7 +97,7 @@
     </div>
 
 
-
+    <hr>
 
     <!-- B3: THUẾ THU NHẬP CÁ NHÂN -->
 
@@ -127,6 +127,56 @@
             <p class="alert alert-danger" id="txtB3"></p>
         </form>
     </div>
+
+
+    <hr>
+
+
+    <!-- B4: TÍNH TIỀN CÁP -->
+
+    <div class="container w-50">
+        <form>
+            <div>
+                <h2>B4: TÍNH TIỀN CÁP</h2>
+            </div>
+
+            <div class="form-group">
+                <label for="maKH">Mã khách hàng</label>
+                <input type="text" class="form-control" id="maKH" placeholder="Nhập Mã khách hàng">
+            </div>
+
+            <div class="row">
+                <div class="col-6 form-group" id="chon">
+                    <label for="loaiKH">Chọn loại khách hàng</label>
+                    <select name="Chọn loại khách hàng" id="KTloaiKH">
+                        <option>Chọn loại</option>
+                        <option value="doanhNghiep">Doanh Nghiệp</option>
+                        <option value="nhaDan">Nhà Dân</option>
+                    </select>
+                </div>
+    
+                <div class="col-6 form-group" id="DN" style="display: none;">
+                    <label for="soKetNoi">Số kết nối</label>
+                    <input type="number" class="form-control" id="soKetNoi" placeholder="1">
+                    <div id="giaoDien"></div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="soKenh">Số kênh</label>
+                <input type="number" class="form-control" id="soKenh" placeholder="1">
+            </div>
+
+            <button id="btnB4" type="button" class="btn btn-primary">Tính tiền cáp</button>
+
+            <p class="alert alert-danger" id="txtB4"></p>
+        </form>
+    </div>
+
+
+    <hr>
+
+
 
 
 
