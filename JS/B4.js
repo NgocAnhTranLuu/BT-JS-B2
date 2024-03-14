@@ -1,11 +1,13 @@
 // Xử lý nút chọn Doanh nhiệp - nhà dân
 
+let valueKH = "";
+
 document.getElementById("KTloaiKH").onchange = function () {
-    loaiKhachHang(document.getElementById("KTloaiKH").value)
-}
+    valueKH = document.getElementById("KTloaiKH").value;
+    loaiKhachHang(valueKH);
+};
 
 function loaiKhachHang(value) {
-    console.log(value)
     if (value == "doanhNghiep") {
         document.getElementById("DN").style.display = 'block';
     }
@@ -17,27 +19,17 @@ function loaiKhachHang(value) {
 
 // Xử lý hàm
 function tienThue() {
-    let doanhNghiep = document.getElementById("doanhNghiep");
-    let nhaDan = document.getElementById("nhaDan");
 
     let maKH = document.getElementById("maKH").value;
-
-    let soKetNoi = Number(document.getElementById("soKetNoi").value);
     let soKenh = Number(document.getElementById("soKenh").value);
 
-
-    let LoaiKH = "";
-    LoaiKH = kiemTraLoaiKH(doanhNghiep,nhaDan)
-    // console.log(LoaiKH)
-
-
     let tongTien = 0;
-    switch (LoaiKH) {
+    switch (valueKH) {
         case "doanhNghiep":
-            tongTien = (15 + 75 + 5 * soKetNoi + 50 * soKenh)
+            tongTien = tinhTienDN(soKenh)
             break;
         case "nhaDan":
-            tongTien = (4.5 + 20.5 + 7.5 * soKenh)
+            tongTien = tinhTienNhaDan(soKenh)
             break;
         default:
             alert("hãy chọn loại Khách hàng")
@@ -45,22 +37,18 @@ function tienThue() {
             
     }
 
-
     document.getElementById("txtB4").innerHTML = "Mã Khách hàng: " + maKH + "<br> Tiền cáp: " + tongTien + " $";
 }
 
-// Hàm kiểm tra loại Khách hàng
-function kiemTraLoaiKH(option1,option2) {
-    let LoaiKH = "";
-    if (option1.checked) {
-        LoaiKH = option1.value
-    }
-    else if (option2.checked) {
-        LoaiKH = option2.value
-    }
-    else{alert("hãy chọn loại Khách hàng")}
-    return LoaiKH;
+function tinhTienDN(soKenh){
+    let soKetNoi = Number(document.getElementById("soKetNoi").value);
+    tongTien = 15 + 75 + 5 * soKetNoi + 50 * soKenh
+    return tongTien;
 }
 
+function tinhTienNhaDan(soKenh){
+    tongTien = 4.5 + 20.5 + 7.5 * soKenh
+    return tongTien;
+}
 
 document.getElementById("btnB4").onclick = tienThue;
